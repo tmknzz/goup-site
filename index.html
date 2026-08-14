@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoUp — サポート / Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.5rem; }
+  h3 { font-size: 1rem; margin-top: 1.75rem; }
+  .tagline { margin-top: 0; opacity: 0.7; }
+  hr { border: none; border-top: 1px solid; opacity: 0.15; margin: 3rem 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+  dt { font-weight: 600; margin-top: 1.25rem; }
+  dd { margin-left: 0; }
+  footer { margin-top: 3rem; font-size: 0.875rem; opacity: 0.7; }
+</style>
+</head>
+<body>
+
+<h1>GoUp</h1>
+<p class="tagline">Safari のツールバーボタンで、URL の階層をひとつ上へ。</p>
+
+<h2>サポート</h2>
+
+<p>不具合の報告、質問、要望はメールで受け付けています。返信までに数日いただくことがあります。</p>
+
+<dl>
+  <dt>連絡先</dt>
+  <dd><a href="mailto:tamekunij@gmail.com">tamekunij@gmail.com</a></dd>
+</dl>
+
+<p>不具合の報告では、macOS のバージョン、Safari のバージョン、問題が起きたページの URL（差し支えなければ）を添えていただけると原因を特定しやすくなります。</p>
+
+<h3>拡張機能を有効にする</h3>
+
+<p>GoUp は Safari の機能拡張です。アプリを起動しただけでは動きません。Safari の「設定」（macOS 13 以降）または「環境設定」（macOS 12 以前）を開き、「機能拡張」で GoUp をオンにしてください。オンにすると、ツールバーに上向き矢印のボタンが表示されます。</p>
+
+<h3>ボタンを押しても何も起きない</h3>
+
+<p>すでに最上位の階層にいる場合、GoUp は何もしません。<code>https://example.com/</code> のようにパスが残っていないページ、および <code>http</code> / <code>https</code> / <code>file</code> 以外のスキームでは動作しません。</p>
+
+<p>ボタンは常に押せる状態のままにしてあります。クリック前にそのページが最上位かどうかを判定するには、いま要求している <code>activeTab</code> より広い権限が必要になるためです。権限を最小限に保つことを優先し、ボタンを灰色にする表示を見送りました。</p>
+
+<h3>何が起きるのか</h3>
+
+<p>ツールバーのボタンをクリックすると、現在の URL のパスが一段階だけ上に移動します。クエリ文字列とフラグメントは破棄されます。ホスト名より上には移動しません（<code>docs.example.com</code> から <code>example.com</code> へは移動しません）。</p>
+
+<h2>プライバシー</h2>
+
+<p>GoUp は情報を一切収集しません。詳細は<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<hr>
+
+<h1>GoUp</h1>
+<p class="tagline">A Safari toolbar button that moves one level up the URL path.</p>
+
+<h2>Support</h2>
+
+<p>Bug reports, questions and requests are welcome by email. A reply may take a few days.</p>
+
+<dl>
+  <dt>Contact</dt>
+  <dd><a href="mailto:tamekunij@gmail.com">tamekunij@gmail.com</a></dd>
+</dl>
+
+<p>For bug reports, including your macOS version, your Safari version and the URL of the page where the problem occurred (if you are comfortable sharing it) makes the cause much easier to find.</p>
+
+<h3>Enabling the extension</h3>
+
+<p>GoUp is a Safari extension. Launching the app is not enough. Open Safari's Settings (macOS 13 and later) or Preferences (macOS 12 and earlier), go to Extensions, and turn GoUp on. An up-arrow button then appears in the toolbar.</p>
+
+<h3>The button does nothing</h3>
+
+<p>When you are already at the top of a site, GoUp does nothing. It does not act on pages with no path left, such as <code>https://example.com/</code>, or on schemes other than <code>http</code>, <code>https</code> and <code>file</code>.</p>
+
+<p>The button deliberately stays enabled at all times. Deciding beforehand whether a page is already at the top would require broader permissions than the <code>activeTab</code> it requests today. Keeping permissions minimal was chosen over greying the button out.</p>
+
+<h3>What it does</h3>
+
+<p>Clicking the toolbar button moves the current URL's path one level up. Query strings and fragments are discarded. It never walks up past the host name — it will not take you from <code>docs.example.com</code> to <code>example.com</code>.</p>
+
+<h2>Privacy</h2>
+
+<p>GoUp collects nothing. See the <a href="privacy.html">privacy policy</a> for details.</p>
+
+<footer>
+  <p>© 2026 tmknzz</p>
+</footer>
+
+</body>
+</html>
